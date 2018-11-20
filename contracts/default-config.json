@@ -1,0 +1,194 @@
+{
+    "defaultWallet": "wallet.json",
+    "password": {
+        "AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ": "password",
+        "AecaeSEBkt5GcBCxwz1F41TvdjX3dnKBkJ": "password",
+        "AQvZMDecMoCi2y4V6QKdJBtHW1eV7Vbaof": "password"
+    },
+    "deployConfig": {
+        "name": "contract name",
+        "version": "contract version",
+        "author": "the author of contract",
+        "email": "email address",
+        "desc": "a description for your contract",
+        "needStorage": true,
+        "payer": "AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ",
+        "gasPrice": 0,
+        "gasLimit": 31000000
+    },
+    "invokeConfig": {
+        "abi": "vote_abi.json",
+        "defaultPayer": "AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ",
+        "gasPrice": 0,
+        "gasLimit": 20000,
+        "functions": [
+            {
+                "operation": "createVoteAction",
+                "args": [
+                  {
+                      "name":"actionName",
+                      "value": "String:action1"
+                  },
+                  {
+                    "name":"admin",
+                    "value": "ByteArray:AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"
+                  }
+                ],
+                "signers": {
+                    "m": 1,
+                    "signer": [
+                        "AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"
+                    ]
+                },
+                "preExec": false
+            },
+            {
+                "operation": "getVoteAction",
+                "args": [
+                  {
+                      "name":"actionName",
+                      "value": "String:action1"
+                  }
+                ],
+                "signers": {},
+                "preExec": true
+            },
+            {
+                "operation": "applyToCandidate",
+                "args": [
+                  {
+                      "name":"actionName",
+                      "value": "String:action1"
+                  },
+                  {
+                    "name":"address",
+                    "value": "ByteArray:AecaeSEBkt5GcBCxwz1F41TvdjX3dnKBkJ"
+                  }
+                ],
+                "signers": {
+                    "m": 1,
+                    "signer": [
+                        "AecaeSEBkt5GcBCxwz1F41TvdjX3dnKBkJ"
+                    ]
+                },
+                "preExec": false
+            },
+            {
+                "operation": "getApplyInfo",
+                "args": [
+                  {
+                      "name": "actionName",
+                      "value": "String:action1"
+                  }
+                ],
+                "signers": {},
+                "preExec": true
+            },
+            {
+                "operation": "approveApply",
+                "args": [
+                  {
+                      "name":"actionName",
+                      "value": "String:action1"
+                  },
+                  {
+                    "name":"admin",
+                    "value": "ByteArray:AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"
+                  },
+                  {
+                    "name":"address",
+                    "value": "ByteArray:AecaeSEBkt5GcBCxwz1F41TvdjX3dnKBkJ"
+                  }
+                ],
+                "signers": {
+                    "m": 1,
+                    "signer": [
+                        "AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"
+                    ]
+                },
+                "preExec": false
+            },
+            {
+                "operation": "getCandadite",
+                "args": [
+                  {
+                      "name": "actionName",
+                      "value": "String:action1"
+                  }
+                ],
+                "signers": {},
+                "preExec": true
+            },
+            {
+                "operation": "vote",
+                "args": [
+                  {
+                      "name":"actionName",
+                      "value": "String:action1"
+                  },
+                  {
+                    "name":"voter",
+                    "value": "ByteArray:AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"
+                  },
+                  {
+                      "name":"candadite",
+                      "value": "ByteArray:AecaeSEBkt5GcBCxwz1F41TvdjX3dnKBkJ"
+                  }
+                ],
+                "signers": {
+                    "m": 1,
+                    "signer": [
+                        "AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"
+                    ]
+                },
+                "preExec": false
+            },
+            {
+                "operation": "getPoll",
+                "args": [
+                  {
+                      "name":"actionName",
+                      "value": "String:action1"
+                  },
+                  {
+                    "name":"candidate",
+                    "value": "ByteArray:AecaeSEBkt5GcBCxwz1F41TvdjX3dnKBkJ"
+                  }
+                ],
+                "signers": {},
+                "preExec": true
+            },
+            {
+                "operation": "endAction",
+                "args": [
+                  {
+                      "name":"actionName",
+                      "value": "String:action1"
+                  },
+                  {
+                    "name":"admin",
+                    "value": "ByteArray:AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"
+                  }
+                ],
+                "signers": {
+                    "m": 1,
+                    "signer": [
+                        "AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"
+                    ]
+                },
+                "preExec": false
+            },
+            {
+                "operation": "getVictor",
+                "args": [
+                  {
+                      "name":"actionName",
+                      "value": "String:action1"
+                  }
+                ],
+                "signers": {},
+                "preExec": true
+            }
+        ]
+    }
+}
